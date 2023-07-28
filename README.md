@@ -3,7 +3,23 @@
 
 A pure Python utility library for making games with Pygame.
 
-Currently a work in progress -
+# INSTALLATION
+
+```
+pip install guc
+```
+
+Either `pygame` or `pygame-ce` must also be installed.
+
+# TESTING
+
+To test `guc`, run
+
+```
+python -m unittest
+```
+
+All tests live in `test_guc`
 
 ## Release Notes
 
