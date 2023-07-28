@@ -16,6 +16,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+optional-dependencies = [
+  'pygame-ce',
+]
 
 [project.urls]
 "Homepage" = "https://github.com/groundupcoder/guc"
