@@ -3,7 +3,7 @@
     "displayName": "guc",
     "description": "the GUC programming language",
     "version": "0.0.0",
-    "publisher": "guc",
+    "publisher": "groundupcoder",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",

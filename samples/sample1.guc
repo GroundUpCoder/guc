@@ -1,0 +1,24 @@
+const x = 14
+x + 3
+
+const s = r"""Hello, this is some text
+for the variable s
+"""
+const k = s
+len(s)
+const list = [1, 2, 3]
+const listLength = len(list)
+
+const fib = n => if n < 2 then 1 else fib(n - 1) + fib(n - 2)
+fib(0)
+fib(1)
+fib(2)
+fib(3)
+fib(4)
+fib(5)
+fib(6)
+fib(7)
+fib(8)
+fib(9)
+fib(10)
+fib(11)
