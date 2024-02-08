@@ -1,0 +1,103 @@
+{
+    "name": "guc",
+    "displayName": "guc",
+    "description": "the GUC programming language",
+    "version": "0.0.0",
+    "publisher": "guc",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/groundupcoder/guc"
+    },
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./out/extension",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint \"src/**/*.ts\"",
+        "watch": "tsc -watch -p ./"
+    },
+    "contributes": {
+        "configurationDefaults": {
+            "[guc]": {
+                "editor.tabSize": 2
+            }
+        },
+        "configuration": {
+            "title": "guc",
+            "properties": {
+                "guc.gucpath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Path to search for guc scripts. List of paths separated by ':'"
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "guc",
+                "aliases": [
+                    "guc",
+                    "guc"
+                ],
+                "extensions": [
+                    ".guc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "guc",
+                "scopeName": "source.guc",
+                "path": "./syntaxes/guc.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "guc.tokenize",
+                "title": "GUC: Tokenize GUC Code"
+            },
+            {
+                "command": "guc.parse",
+                "title": "GUC: Parse GUC Code"
+            },
+            {
+                "command": "guc.runfile",
+                "title": "GUC: Run GUC File"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "guc.runfile",
+                "key": "f5",
+                "when": "editorLangId == guc"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "guc.tokenize",
+                    "when": "editorLangId == guc"
+                },
+                {
+                    "command": "guc.parse",
+                    "when": "editorLangId == guc"
+                },
+                {
+                    "command": "guc.runfile",
+                    "when": "editorLangId == guc"
+                }
+            ]
+        }
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.75.0",
+        "ts-loader": "^9.4.2"
+    }
+}
