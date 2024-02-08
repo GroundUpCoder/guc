@@ -3,7 +3,7 @@
     "displayName": "guc",
     "description": "the GUC programming language",
     "version": "0.0.0",
-    "publisher": "groundupcoder",
+    "publisher": "guc",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
@@ -96,6 +96,11 @@
             ]
         }
     },
+    "activationEvents": [
+        "onLanguage:mtots",
+        "onCommand:mtots.tokenize",
+        "onCommand:mtots.parse"
+    ],
     "devDependencies": {
         "@types/vscode": "^1.75.0",
         "ts-loader": "^9.4.2"
