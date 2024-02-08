@@ -1,2 +1,2 @@
 # guc
- GUC programming language
+ GUC (Ground Up Coder) programming language

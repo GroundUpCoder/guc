@@ -1,7 +1,7 @@
 {
     "name": "guc",
     "displayName": "guc",
-    "description": "the GUC programming language",
+    "description": "the GUC (Ground Up Coder) programming language",
     "version": "0.0.0",
     "publisher": "guc",
     "license": "Apache-2.0",
