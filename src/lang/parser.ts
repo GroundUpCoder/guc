@@ -242,15 +242,16 @@ export function parse(uri: Uri, s: string): ast.File {
         const values: ast.Node[] = []; // should always be a multiple of 2
         while (consume('NEWLINE'));
         while (!eof() && !at('}')) {
-          while (consume('NEWLINE'));
           values.push(parseExpression());
           while (consume('NEWLINE'));
           expect(':');
           while (consume('NEWLINE'));
           values.push(parseExpression());
+          while (consume('NEWLINE'));
           if (!consume(',')) {
             break;
           }
+          while (consume('NEWLINE'));
         }
         const end = expect('}').range.end;
         return new ast.Operation({ uri, range: { start, end } }, 'MAP-DISPLAY', values);
