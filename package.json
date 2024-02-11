@@ -96,11 +96,7 @@
             ]
         }
     },
-    "activationEvents": [
-        "onLanguage:mtots",
-        "onCommand:mtots.tokenize",
-        "onCommand:mtots.parse"
-    ],
+    "activationEvents": [],
     "devDependencies": {
         "@types/vscode": "^1.75.0",
         "ts-loader": "^9.4.2"
